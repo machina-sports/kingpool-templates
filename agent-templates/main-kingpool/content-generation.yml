@@ -12,8 +12,8 @@ workflow:
   inputs:
     messages: "$.get('messages', [])"
   outputs:
-    message: "$.get('message')"
-    workflow-status: "$.get('message') is not None and 'executed' or 'skipped'"
+    message: "$.get('content-preview')"
+    workflow-status: "$.get('content-preview') is not None and 'executed' or 'skipped'"
   tasks:
 
     # Load similar documents
