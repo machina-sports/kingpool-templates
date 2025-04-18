@@ -12,7 +12,7 @@ workflow:
   inputs:
     messages: "$.get('messages', [])"
   outputs:
-    message: "$.get('content-preview')"
+    message: "$.get('content-preview', {}).get('content')"
     workflow-status: "$.get('content-preview') is not None and 'executed' or 'skipped'"
   tasks:
 
